@@ -3,8 +3,6 @@ import Helmet from 'react-helmet';
 import { connect } from 'react-redux';
 import { loadResult } from './actions';
 
-// Import the CSS reset, which HtmlWebpackPlugin transfers to the build folder
-import 'sanitize.css/sanitize.css';
 
 // Activate `onTouchTap` of `material-ui`
 import injectTapEventPlugin from 'react-tap-event-plugin';
