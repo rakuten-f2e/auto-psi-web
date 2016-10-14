@@ -15,7 +15,7 @@ import PsiResultSection from 'containers/PsiResultSection';
 
 const pages = [{
   domain: 'http://www.html5rocks.com/',
-  addresses: ['en', 'ja', 'ko'],
+  addresses: ['en', 'ja', 'ko', 'tw'],
   strategy: 'desktop',
   rules: [
     'Optimize images',
