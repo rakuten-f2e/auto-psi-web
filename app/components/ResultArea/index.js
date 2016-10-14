@@ -3,6 +3,7 @@ import { Tabs, Tab } from 'material-ui/Tabs';
 import { CardText } from 'material-ui/Card';
 
 import Loading from 'components/Loading';
+import ResultItem from 'components/ResultItem';
 
 function ResultArea(props) {
   const { psiResults } = props;
@@ -13,23 +14,24 @@ function ResultArea(props) {
     <Tabs>{
       Object.keys(ruleResults).map((ruleResultKey, idx) => {
         const {
-          groups,
           localizedRuleName,
           summary,
-          ruleImpact,
+          urlBlocks,
         } = ruleResults[ruleResultKey];
 
         return (
           <Tab
             key={ruleResultKey}
-            label={idx}
-            value={idx}
-          >{`
-            ${groups}
-            ${localizedRuleName}
-            ${summary}
-            ${ruleImpact}
-          `}</Tab>
+            label={idx + 1}
+            value={idx + 1}
+          >
+            <ResultItem
+              summary={summary}
+              urlBlocks={urlBlocks}
+              ruleResultKey={ruleResultKey}
+              localizedRuleName={localizedRuleName}
+            />
+          </Tab>
         );
       })
     }</Tabs>
