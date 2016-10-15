@@ -46,7 +46,7 @@ function ResultItem(props) {
             <List
               key={`url-block-list_${listIndex}`}
             >
-              <span>{reactHtmlParser(parseFormat(urlBlock.header))}</span>
+              <p>{reactHtmlParser(parseFormat(urlBlock.header))}</p>
               <Divider />
               {urlBlock.urls && urlBlock.urls.map((url, listItemIndex) => (
                 <ListItem
